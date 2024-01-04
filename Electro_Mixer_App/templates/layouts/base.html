@@ -1,24 +1,33 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang='en'>
     <!--HEAD-->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href="{% static "styles/base.css" %}">
         <title>Electro Mixer</title>
     </head>
 
-    <!--HEADER-->
-    <header>
-        <div>
-            Hello World!
-        </div>
-    </header>
-
     <!--BODY-->
-    <body>
-        {% block content%}
-            <!--The changeable content will be here.-->
-        {% endblock %}
+    <body class="body_container">
+
+        <!--NAVIGATION BAR-->
+        <nav class="top_nav_bar">
+            <ul>
+                <li>Home</li>
+                <li>Blog</li>
+                <li>About</li>
+                <li>Help</li>
+                <li>Sesion</li>
+            </ul>
+        </nav>
+
+        <div class="block_content_container">
+            {% block content%}
+                <!--The changeable content will be placed here.-->
+            {% endblock %}
+        </div>
     </body>
 
     <!--FOOTER-->
@@ -27,3 +36,4 @@
             Goodbye World!
         </div>
     </footer>
+</html>
